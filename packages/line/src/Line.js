@@ -19,6 +19,7 @@ import Points from './Points'
 import Mesh from './Mesh'
 import PointTooltip from './PointTooltip'
 import SliceTooltip from './SliceTooltip'
+import { animated } from '@react-spring/web'
 
 const Line = props => {
     const {
@@ -190,7 +191,13 @@ const Line = props => {
         ),
         areas: null,
         lines: (
-            <Lines key="lines" lines={series} lineGenerator={lineGenerator} lineWidth={lineWidth} />
+            <Lines
+                key="lines"
+                lines={series}
+                lineGenerator={lineGenerator}
+                lineWidth={lineWidth}
+                animated={animated}
+            />
         ),
         slices: null,
         points: null,
